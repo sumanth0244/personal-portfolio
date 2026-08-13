@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio-Sumanth</title>
+<meta name="description" content="Portfolio of Your Name, a full-stack developer building end-to-end web applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__mark">YN<span class="nav__mark-dot">.</span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#stack" data-nav>Stack</a>
+      <a href="#work" data-nav>Work</a>
+      <a href="#about" data-nav>About</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <a href="#contact" class="nav__cta">Let's talk</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Mobile">
+    <a href="#stack" data-nav>Stack</a>
+    <a href="#work" data-nav>Work</a>
+    <a href="#about" data-nav>About</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Full-stack developer</p>
+        <h1>Hi, I'm Sumanth</h1>
+        <h2 class="hero__title">
+          I build things that work<br>
+          <em>from the click&nbsp;to the&nbsp;database.</em>
+        </h2>
+        <p class="hero__lede">
+          Myself Sumanth — I build modern, responsive, and scalable web applications using
+          JavaScript, React, Node.js, Express, and MongoDB. Passionate about
+          creating user-friendly digital experiences and solving real-world
+          problems through technology. Currently studying Computer Science and Engineering at 
+          Canara Engineering College and seeking opportunities to contribute to innovative projects.
+        </p>
+        <div class="hero__actions">
+          <a href="#project" class="btn btn--primary">View projects</a>
+          <a href="#contact" class="btn btn--secondary">Contact me</a>
+        </div>
+      </div>
+
+      <div class="hero__diagram" aria-hidden="true">
+        <svg viewBox="0 0 360 300" class="stack-svg" id="stackSvg">
+          <!-- connecting line -->
+          <line x1="180" y1="58" x2="180" y2="128" class="stack-svg__wire" />
+          <line x1="180" y1="188" x2="180" y2="258" class="stack-svg__wire" />
+
+          <!-- CLIENT layer -->
+          <g class="stack-svg__layer" data-layer="client">
+            <rect x="30" y="16" width="300" height="72" rx="6"></rect>
+            <text x="54" y="46" class="stack-svg__label">CLIENT</text>
+            <text x="54" y="68" class="stack-svg__sub">HTML · CSS · JavaScript</text>
+          </g>
+
+          <!-- SERVER layer -->
+          <g class="stack-svg__layer" data-layer="server">
+            <rect x="30" y="128" width="300" height="72" rx="6"></rect>
+            <text x="54" y="158" class="stack-svg__label">SERVER</text>
+            <text x="54" y="180" class="stack-svg__sub">Node.js · Express</text>
+          </g>
+
+          <!-- DATA layer -->
+          <g class="stack-svg__layer" data-layer="data">
+            <rect x="30" y="240" width="300" height="72" rx="6"></rect>
+            <text x="54" y="270" class="stack-svg__label">DATA</text>
+            <text x="54" y="292" class="stack-svg__sub">MongoDB</text>
+          </g>
+
+          <circle r="5" class="stack-svg__pulse" id="stackPulse" cx="180" cy="16" />
+        </svg>
+        <p class="hero__diagram-caption">A request, start to finish.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STACK / SKILLS ============ -->
+  <section class="stack-section" id="stack">
+    <div class="section-head">
+      <p class="eyebrow">Capabilities</p>
+      <h2>Three layers, one person.</h2>
+    </div>
+
+    <div class="layers">
+      <article class="layer-card">
+        <p class="layer-card__tag">01 — Client</p>
+        <h3>Interfaces</h3>
+        <p class="layer-card__desc">What people actually touch — fast, accessible, and built to hold up on a small screen.</p>
+        <ul class="layer-card__list">
+          <li>HTML5 &amp; semantic markup</li>
+          <li>CSS3, Flexbox, Grid</li>
+          <li>JavaScript (ES6+)</li>
+          <li>React</li>
+        </ul>
+      </article>
+
+      <article class="layer-card">
+        <p class="layer-card__tag">02 — Server</p>
+        <h3>Logic</h3>
+        <p class="layer-card__desc">The part no one sees — routing, auth, validation, and the rules that keep data honest.</p>
+        <ul class="layer-card__list">
+          <li>Node.js &amp; Express</li>
+          <li>REST API design</li>
+          <li>Authentication (JWT)</li>
+          <li>Server-side validation</li>
+        </ul>
+      </article>
+
+      <article class="layer-card">
+        <p class="layer-card__tag">03 — Data</p>
+        <h3>Storage</h3>
+        <p class="layer-card__desc">Where everything lives — modeled so it's easy to query today and extend tomorrow.</p>
+        <ul class="layer-card__list">
+          <li>MongoDB &amp; Mongoose</li>
+          <li>Schema design</li>
+          <li>Aggregation pipelines</li>
+          <li>Basic SQL</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ WORK / PROJECTS ============ -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>Things I've shipped.</h2>
+    </div>
+
+    <div class="projects" id="projects">
+      <!-- Project cards are rendered by js/script.js from the PROJECTS array,
+           so this section is a one-line swap away from fetch('/api/projects') later. -->
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about__grid">
+      <div class="about__portrait" aria-hidden="true">
+        <div class="about__portrait-frame">YN</div>
+      </div>
+      <div class="about__copy">
+        <p class="eyebrow">About</p>
+        <h2>A little about how I work.</h2>
+        <p>
+          Replace this paragraph with two or three sentences about your background —
+          how you got into development, what kind of problems you like solving, and
+          what you're doing now (studying, working, freelancing).
+        </p>
+        <p>
+          Add a second paragraph here about your approach: do you favor clean
+          architecture, fast iteration, accessibility, performance? Say what actually
+          makes you tick as a developer, not a generic list of adjectives.
+        </p>
+        <div class="about__facts">
+          <div class="about__fact">
+            <p class="about__fact-num">[X]</p>
+            <p class="about__fact-label">Projects shipped</p>
+          </div>
+          <div class="about__fact">
+            <p class="about__fact-num">[X]</p>
+            <p class="about__fact-label">Years writing code</p>
+          </div>
+          <div class="about__fact">
+            <p class="about__fact-num">[X]</p>
+            <p class="about__fact-label">Technologies used</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <p class="eyebrow">Contact</p>
+      <h2>Have a project in mind?</h2>
+      <p class="contact__lede">Tell me a little about it, and I'll reply within a couple of days.</p>
+    </div>
+
+    <form class="contact__form" id="contactForm" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+        <span class="field__error" data-error-for="name"></span>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+        <span class="field__error" data-error-for="email"></span>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <span class="field__error" data-error-for="message"></span>
+      </div>
+      <button type="submit" class="btn btn--primary" id="submitBtn">Send message</button>
+      <p class="contact__status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="contact__alt">
+      <a href="mailto:your.email@example.com">your.email@example.com</a>
+      <div class="contact__social">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Your Name. Built with HTML, CSS &amp; JavaScript.</p>
+  <a href="#top" class="footer__top">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
