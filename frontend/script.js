@@ -6,36 +6,34 @@
 // =============================================================
 const PROJECTS = [
   {
-    title: "Project One",
+    title: "Multi-Agent Career Assistant",
+    year: "In Progress-2026",
+    description: "An AI-powered career assistant designed to help students explore career paths, improve their skills through multiple specialized AI agents.",
+    layers: ["Frontend", "Python", "MongoDB"],
+    
+  },
+  {
+    title: "Smart AI Interview System",
     year: "2025",
-    description: "One or two sentences on what this project does and who it's for.",
-    layers: ["Client", "Server", "Data"],
+    description: "An AI powered interview platform designed to provide an accessible and interactive interview experience for visually impaired users.",
+    layers: ["Frontend","Python", "FireBase"],
     liveUrl: "#",
     codeUrl: "#"
+    
   },
   {
-    title: "Project Two",
+    title: "Travel Website",
     year: "2024",
-    description: "One or two sentences on what this project does and who it's for.",
-    layers: ["Client", "Server"],
+    description: "A responsive travel website designed to help users explore destinations and access useful travel informations through a simple interface.",
+    layers: ["HTML5", "CSS3","JavaScript"],
     liveUrl: "#",
     codeUrl: "#"
   },
   {
-    title: "Project Three",
-    year: "2024",
-    description: "One or two sentences on what this project does and who it's for.",
-    layers: ["Client", "Data"],
-    liveUrl: "#",
-    codeUrl: "#"
-  },
-  {
-    title: "Project Four",
-    year: "2023",
-    description: "One or two sentences on what this project does and who it's for.",
-    layers: ["Server", "Data"],
-    liveUrl: "#",
-    codeUrl: "#"
+    title: "Hackathons and Competitions",
+    //year: "2023",
+    description: "Participated in technical hackathons, coding competitions, and problem-solving events to gain hands on experience and collaborate on real-world challenges",
+    layers: [],
   }
 ];
 
@@ -56,12 +54,27 @@ function renderProjects(projects){
       <div class="project-card__layers">
         ${p.layers.map(l => `<span>${escapeHTML(l)}</span>`).join("")}
       </div>
+
+
+
+      <!--${p.liveUrl || p.codeUrl ? `
+        <div class="project-card_links">
+        ${p.liveUrl ? `<a href="${p.liveUrl}" target="_blank" rel="noopener">Live ↗</a>`:""}
+        ${p.codeUrl ? `<a href="${p.codeUrl}" target="_blank" rel="noopener">Code ↗</a>`:""}
+       </div>
+       `:""}-->
+
+     ${p.liveUrl || p.codeUrl ? `
       <div class="project-card__links">
         <a href="${p.liveUrl}" target="_blank" rel="noopener">Live ↗</a>
         <a href="${p.codeUrl}" target="_blank" rel="noopener">Code ↗</a>
       </div>
+      `:""}
+
+
     </article>
   `).join("");
+
 }
 
 function escapeHTML(str){
