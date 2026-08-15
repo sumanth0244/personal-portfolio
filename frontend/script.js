@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
-fetch("https://personal-portfolio-ncrc.vercel.app/contact")
+/*fetch("https://personal-portfolio-ncrc.vercel.app/api/contact")
   .then(response => response.json())
   .then(data => console.log(data))
-  .catch(error => console.error(error));
+  .catch(error => console.error(error));*/
