@@ -273,7 +273,7 @@ function setupContactForm(){
     submitBtn.textContent = "Sending…";
 
     try {
-      const res = await fetch("https://personal-portfolio-ncrc.vercel.app/api/index/contact", {
+      const res = await fetch("https://personal-portfolio-ncrc.vercel.app/api/index", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
