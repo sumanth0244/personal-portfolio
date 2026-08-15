@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 });
 
 // Contact route
-app.post("/", async (req, res) => {
+app.post(["/","/api/index"], async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
