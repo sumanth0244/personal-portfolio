@@ -298,7 +298,7 @@ section{
   align-items: center;
 }
 .about__portrait-frame{
-  aspect-ratio: 4/5;
+  aspect-ratio: 5/5;
   border-radius: var(--radius);
   border:0px,1px solid var(--line);
   background: var(--surface);
@@ -349,7 +349,7 @@ section{
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
 }
 .contact__alt > a{ font-family: var(--font-mono); font-size: 14px; color: var(--accent); }
-.contact__social{ display: flex; gap: 20px; font-size: 14px; color: var(--ink-soft); }
+.contact__social{ display: flex; gap: 20px; font-size: 14px; color: var(--accent); }
 .contact__social a:hover{ color: var(--ink); }
 
 /* =========================================================

@@ -10,15 +10,14 @@ const PROJECTS = [
     year: "In Progress-2026",
     description: "An AI-powered career assistant designed to help students explore career paths, improve their skills through multiple specialized AI agents.",
     layers: ["Frontend", "Python", "MongoDB"],
-    
+    architectureUrl: "https://github.com/sumanth0244/AI-Career-Assistant/blob/main/README.md",
   },
   {
     title: "Smart AI Interview System",
     year: "2025",
     description: "An AI powered interview platform designed to provide an accessible and interactive interview experience for visually impaired users.",
     layers: ["Frontend","Python", "FireBase"],
-    liveUrl: "#",
-    codeUrl: "#"
+    codeUrl: "https://github.com/Sidhu1909/projecthackethon",
     
   },
   {
@@ -26,14 +25,14 @@ const PROJECTS = [
     year: "2024",
     description: "A responsive travel website designed to help users explore destinations and access useful travel informations through a simple interface.",
     layers: ["HTML5", "CSS3","JavaScript"],
-    liveUrl: "#",
-    codeUrl: "#"
+    overviewUrl: "https://github.com/sumanth0244/Travel_Website/blob/main/README.md",
   },
   {
     title: "Hackathons and Competitions",
     //year: "2023",
     description: "Participated in technical hackathons, coding competitions, and problem-solving events to gain hands on experience and collaborate on real-world challenges",
     layers: [],
+    highlighturl: "https://www.linkedin.com/in/sumanth-bhandary-bb5347329/",
   }
 ];
 
@@ -64,13 +63,35 @@ function renderProjects(projects){
        </div>
        `:""}-->
 
-     ${p.liveUrl || p.codeUrl ? `
+     ${p.liveUrl ? `
       <div class="project-card__links">
         <a href="${p.liveUrl}" target="_blank" rel="noopener">Live ↗</a>
+      </div>
+      `:""}
+
+     ${p.codeUrl ? `
+      <div class="project-card__links">
         <a href="${p.codeUrl}" target="_blank" rel="noopener">Code ↗</a>
       </div>
       `:""}
 
+      ${p.architectureUrl ? `
+        <div class="project-card__links">
+        <a href="${p.architectureUrl}" target="_blank" rel="noopener">Architecture ↗</a>
+      </div>
+      `:""}
+
+      ${p.overviewUrl ? `
+        <div class="project-card__links">
+        <a href="${p.overviewUrl}" target="_blank" rel="noopener">Overview ↗</a>
+      </div>
+      `:""}
+
+      ${p.highlighturl ? `
+        <div class="project-card__links">
+        <a href="${p.highlighturl}" target="_blank" rel="noopener">Highlights ↗</a>
+      </div>
+      `:""}
 
     </article>
   `).join("");
