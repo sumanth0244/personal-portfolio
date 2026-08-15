@@ -250,7 +250,7 @@ function setupContactForm(){
     submitBtn.textContent = "Sending…";
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("http://localhost:5000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
@@ -282,3 +282,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
+
+fetch("http://localhost:5000")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
