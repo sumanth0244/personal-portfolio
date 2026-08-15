@@ -53,6 +53,21 @@ input, textarea{ font: inherit; }
   border-radius: 2px;
 }
 
+
+#main section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+#main section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
 .skip-link{
   position: absolute; left: -9999px; top: 0;
   background: var(--ink); color: var(--bg);
